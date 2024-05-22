@@ -94,5 +94,5 @@ eval "$(zoxide init zsh)"
 eval "$(/usr/local/bin/brew shellenv)"
 
 # GPG
-export GPG_TTY=$(tty)
+export GPG_TTY=$TTY
 gpgconf --launch gpg-agent
