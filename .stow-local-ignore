@@ -2,6 +2,7 @@
 .gitignore
 .DS_Store
 .macos
+.luacheckrc
 init.sh
 README.md
 TODO.md
