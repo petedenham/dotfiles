@@ -19,6 +19,7 @@ return {
 				yaml = { "yamlfix" },
 				css = { { "prettierd", "prettier" } },
 				scss = { { "prettierd", "prettier" } },
+				go = { "goimports", "gofumpt", "golines" },
 			},
 			format_on_save = {
 				timeout_ms = 500,

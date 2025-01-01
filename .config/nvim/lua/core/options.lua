@@ -19,7 +19,7 @@ opt.expandtab = true
 opt.autoindent = true
 
 -- line wrapping
-opt.wrap = true
+opt.wrap = false
 
 -- search settings
 opt.ignorecase = true
@@ -44,7 +44,5 @@ opt.splitright = true
 opt.splitbelow = true
 opt.iskeyword:append("-")
 
-vim.opt.syntax = "on"
-vim.opt.wildoptions = "pum"
-
+-- utilsnips
 vim.g.UltiSnipsExpandTrigger = "<tab>"

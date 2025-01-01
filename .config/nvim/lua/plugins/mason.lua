@@ -9,13 +9,6 @@ return {
 		local mason_lspconfig = require("mason-lspconfig")
 		local mason_tool_installer = require("mason-tool-installer")
 
-		local server = {
-			"cssls",
-			"html",
-			"lua_ls",
-			"tsserver",
-		}
-
 		mason.setup({
 			ui = {
 				icons = {
@@ -27,12 +20,27 @@ return {
 		})
 
 		mason_lspconfig.setup({
-			ensure_installed = server,
+			ensure_installed = {
+				"cssls",
+				"html",
+				"lua_ls",
+				"tsserver",
+				"gopls",
+			},
 			automatic_installation = true,
 		})
 
 		mason_tool_installer.setup({
-			ensure_installed = server,
+			ensure_installed = {
+				"cssls",
+				"html",
+				"lua_ls",
+				"tsserver",
+				"gopls",
+				"gofumpt",
+				"golines",
+				"goimports",
+			},
 		})
 	end,
 }
