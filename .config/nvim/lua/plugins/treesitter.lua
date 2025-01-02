@@ -1,5 +1,3 @@
--- Highlight, edit and navigate
-
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
