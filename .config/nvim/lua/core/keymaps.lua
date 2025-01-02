@@ -37,3 +37,6 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 -- Diagnostics
 keymap.set("n", "<leader>ed", "<cmd>lua vim.diagnostic.enable()<CR>", { desc = "Show diagnostics" })
 keymap.set("n", "<leader>dd", "<cmd>lua vim.diagnostic.disable()<CR>", { desc = "Hide diagnostics" })
+
+-- Oil
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
