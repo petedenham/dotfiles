@@ -3,7 +3,7 @@ local keymap = vim.keymap
 -- Leader key
 vim.g.mapleader = " "
 
--- Clear search highlights
+-- General
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "No highlights" })
 
 -- Increment/decrement numbers
@@ -40,3 +40,12 @@ keymap.set("n", "<leader>dd", "<cmd>lua vim.diagnostic.disable()<CR>", { desc = 
 
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
+-- Copilot
+vim.keymap.set("v", "<leader>co", ":CopilotChatOptimize<CR>", { desc = "Copilot optimize" })
+vim.keymap.set("v", "<leader>ce", ":CopilotChatExplain<CR>", { desc = "Copilot explain" })
+vim.keymap.set("v", "<leader>cr", ":CopilotChatReview<CR>", { desc = "Copilot review" })
+vim.keymap.set("v", "<leader>cf", ":CopilotChatFix<CR>", { desc = "Copilot fix" })
+vim.keymap.set("v", "<leader>cd", ":CopilotChatDocs<CR>", { desc = "Copilot docs" })
+vim.keymap.set("v", "<leader>ct", ":CopilotChatTests<CR>", { desc = "Copilot tests" })
+vim.keymap.set("v", "<leader>cc", ":CopilotChatCommit<CR>", { desc = "Copilot commit" })
