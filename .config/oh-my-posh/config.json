@@ -65,6 +65,7 @@
       "type": "prompt"
     }
   ],
+  "console_title_template": "{{.PWD}}",
   "final_space": true,
   "palette": {
     "execution": "#f1fa8c",
