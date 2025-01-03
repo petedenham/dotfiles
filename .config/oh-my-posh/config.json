@@ -7,7 +7,7 @@
       "segments": [
         {
           "background": "transparent",
-          "foreground": "p:foreground",
+          "foreground": "p:path",
           "properties": {
             "style": "full"
           },
@@ -17,14 +17,13 @@
         },
         {
           "background": "transparent",
-          "foreground": "p:grey",
           "properties": {
             "branch_icon": "",
             "commit_icon": "@",
             "fetch_status": true
           },
           "style": "plain",
-          "template": " {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <p:cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>",
+          "template": "<p:git-branch> {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <p:git-arrow>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>",
           "type": "git"
         }
       ],
@@ -37,7 +36,7 @@
           "type": "executiontime",
           "style": "plain",
 
-          "foreground": "p:yellow",
+          "foreground": "p:execution",
           "background": "transparent",
           "template": " {{ .FormattedMs }}",
           "properties": {
@@ -55,12 +54,11 @@
         {
           "type": "text",
           "style": "plain",
-          "foreground": "p:foreground",
           "background": "transparent",
           "template": "❯",
           "foreground_templates": [
-            "{{if gt .Code 0}}p:red{{end}}",
-            "{{if eq .Code 0}}p:magenta{{end}}"
+            "{{if gt .Code 0}}p:prompt-error{{end}}",
+            "{{if eq .Code 0}}p:prompt-normal{{end}}"
           ]
         }
       ],
@@ -69,25 +67,24 @@
   ],
   "final_space": true,
   "palette": {
-    "cyan": "#8be9fd",
-    "foreground": "#F8F8F2",
-    "grey": "#6272a4",
-    "red": "#ff5555",
-    "yellow": "#f1fa8c",
-    "magenta": "#ff79c6"
+    "execution": "#f1fa8c",
+    "git-arrow": "#50fa7b",
+    "git-branch": "#6272a4",
+    "path": "#8be9fd",
+    "prompt-error": "#ff5555",
+    "prompt-normal": "#ffb86c"
   },
   "secondary_prompt": {
     "background": "transparent",
-    "foreground": "p:magenta",
+    "foreground": "p:prompt-normal",
     "template": "❯❯ "
   },
   "transient_prompt": {
     "background": "transparent",
-    "foreground": "#f8f8f2",
     "template": "❯ ",
     "foreground_templates": [
-      "{{if gt .Code 0}}p:red{{end}}",
-      "{{if eq .Code 0}}p:magenta{{end}}"
+      "{{if gt .Code 0}}p:prompt-error{{end}}",
+      "{{if eq .Code 0}}p:prompt-normal{{end}}"
     ]
   },
   "version": 3
