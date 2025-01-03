@@ -11,19 +11,13 @@
           "properties": {
             "style": "full"
           },
-          "style": "powerline",
+          "style": "plain",
           "template": "{{ .Path }}",
           "type": "path"
         },
         {
           "background": "transparent",
           "foreground": "p:grey",
-          "foreground_templates": [
-            "p:grey",
-            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:grey{{ end }}",
-            "{{ if gt .Behind 0 }}p:cyan{{ end }}",
-            "{{ if gt .Ahead 0 }}p:cyan{{ end }}"
-          ],
           "properties": {
             "branch_icon": "",
             "commit_icon": "@",
@@ -93,7 +87,7 @@
     "template": "❯ ",
     "foreground_templates": [
       "{{if gt .Code 0}}p:red{{end}}",
-      "{{if eq .Code 0}}p:agenta{{end}}"
+      "{{if eq .Code 0}}p:magenta{{end}}"
     ]
   },
   "version": 3
