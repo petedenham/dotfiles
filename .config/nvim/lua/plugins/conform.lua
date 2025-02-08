@@ -5,6 +5,15 @@ return {
 		local conform = require("conform")
 
 		conform.setup({
+			formatters = {
+				yamlfix = {
+					env = {
+						YAMLFIX_WHITELINES = "1",
+						YAMLFIX_SECTION_WHITELINES = "1",
+						YAMLFIX_EXPLICIT_START = "false",
+					},
+				},
+			},
 			formatters_by_ft = {
 				lua = { "stylua" },
 				javascript = { "prettierd", "prettier", stop_after_first = true },
@@ -21,8 +30,9 @@ return {
 				go = { "goimports", "gofumpt", "golines" },
 			},
 			format_on_save = {
-				timeout_ms = 500,
+				timeout_ms = 1000,
 				lsp_fallback = true,
+				async = false,
 			},
 		})
 
