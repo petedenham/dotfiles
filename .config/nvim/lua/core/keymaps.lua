@@ -19,7 +19,8 @@ keymap.set("n", "<leader>rn", "<cmd>!node %<CR>", { desc = "Run current file in 
 
 -- Copy current file name/path
 keymap.set("n", "<leader>cf", '<cmd>let @+ = expand("%:t")<CR>', { desc = "Copy file name" })
-keymap.set("n", "<leader>cp", '<cmd>let @+ = expand("%:p")<CR>', { desc = "Copy file path" })
+keymap.set("n", "<leader>cap", '<cmd>let @+ = expand("%:~.")<CR>', { desc = "Copy absolute file path" })
+keymap.set("n", "<leader>crp", '<cmd>let @+ = expand("%:.")<CR>', { desc = "Copy relative file path" })
 
 -- Window management
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window veritcally" })
