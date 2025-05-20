@@ -11,6 +11,7 @@ return {
 						YAMLFIX_WHITELINES = "1",
 						YAMLFIX_SECTION_WHITELINES = "1",
 						YAMLFIX_EXPLICIT_START = "false",
+						YAMLFIX_SEQUENCE_STYLE = "block_style",
 					},
 				},
 			},
