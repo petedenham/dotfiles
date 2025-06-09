@@ -80,13 +80,5 @@
     "foreground": "p:prompt-normal",
     "template": "❯❯ "
   },
-  "transient_prompt": {
-    "background": "transparent",
-    "template": "❯ ",
-    "foreground_templates": [
-      "{{if gt .Code 0}}p:prompt-error{{end}}",
-      "{{if eq .Code 0}}p:prompt-normal{{end}}"
-    ]
-  },
   "version": 3
 }
